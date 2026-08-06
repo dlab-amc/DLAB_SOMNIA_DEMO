@@ -6,6 +6,7 @@ import {
   SEED_SUBMIT_NUM,
   VALIDATION_OK,
   buildReportPayload,
+  createShowcaseSubmit,
 } from './fixtures';
 
 const LOG_KO = {
@@ -76,38 +77,9 @@ export function buildProgressForSubmit(submit) {
   };
 }
 
-function createSeedSubmit() {
-  const createdAt = new Date(Date.now() - 60_000).toISOString();
-  return {
-    submit_id: 'demo-seed-id',
-    submit_num: SEED_SUBMIT_NUM,
-    submit_title: 'Demo AHI Algorithm',
-    submit_description: 'GitHub Pages mock submission (pre-completed).',
-    submit_time: createdAt,
-    createdAt,
-    progress_status: 2,
-    job_id: 'demo-job-seed',
-    files: [
-      { name: 'main.py', size: 2048 },
-      { name: 'requirements.txt', size: 128 },
-    ],
-    input_var_list: ['eeg_c3_m2', 'eeg_c4_m1'],
-    output_var_list: ['sleep_stage_5'],
-    selected_subgroups: ['bmi', 'severity'],
-    age_cohort: 'adult',
-    sampling_mode: 'manual',
-    target_sample_size: 120,
-    primary_parameter: 'accuracy',
-    alpha: 0.025,
-    power: 0.8,
-    sigma: 6.4,
-    delta: 5,
-  };
-}
-
 const state = {
   counter: 1,
-  submits: [createSeedSubmit()],
+  submits: [createShowcaseSubmit()],
 };
 
 function ok(data, message = 'OK') {
