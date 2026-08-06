@@ -1,0 +1,172 @@
+/* TEMP - MUI Custom Styling */
+
+/* [Common] Typo - Font */
+.MuiDialogTitle-root.modal-title,
+.MuiTypography-root,
+.MuiTableCell-root,
+.MuiMenuItem-gutters,
+.MuiFormLabel-root,
+.MuiInputBase-root {
+  font-family: 'Pretendard', Pretendard, -apple-system, BlinkMacSystemFont,
+    system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
+    'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', sans-serif !important;
+}
+
+/* 1. Submit Parameters */
+.MuiMenuItem-gutters.option {
+  padding: 0.8rem 1.4rem;
+}
+
+/* 2. NonInferiorityInfoModal */
+.noninferiority-modal {
+  padding: 2rem;
+}
+
+.noninferiority-modal .modal-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.noninferiority-modal .modal-desc .line-wrap {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.noninferiority-modal .table {
+  border-radius: 2px;
+  box-shadow: none;
+  border: 1px solid #ddd;
+  border-bottom: none;
+  margin-bottom: 2rem;
+}
+
+.noninferiority-modal .table .table-header-row {
+  background-color: #eee;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+}
+
+.noninferiority-modal .table .data-cell {
+  padding: 0.6rem 1.2rem !important;
+}
+
+.noninferiority-modal .table .data-row {
+  transition: all 0.2s ease-in;
+}
+.noninferiority-modal .table .data-row:hover {
+  background-color: #f1f7ff;
+}
+
+.noninferiority-modal .table-desc {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.noninferiority-modal .table-desc-list {
+  font-size: 14px;
+  font-weight: 400;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.noninferiority-modal .table-desc-list li {
+  line-height: 1.6;
+  list-style: circle;
+  color: #555;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.noninferiority-modal .table-desc-list li a {
+  color: #333;
+  font-weight: 500;
+}
+.noninferiority-modal .table-desc-list li a:hover {
+  color: #0094ff;
+}
+
+.noninferiority-modal .button-wrap {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.noninferiority-modal .button-wrap button {
+  padding: 0.5rem 2rem;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: none;
+  background-color: #000;
+  transition: all 0.2s ease-in;
+}
+
+.noninferiority-modal .button-wrap button:hover {
+  background-color: #222;
+}
+
+/* 3. ConfirmModal — 레이아웃/타이포는 ConfirmModal.styled.jsx 담당 */
+
+/* 4. Submit Error Modal */
+
+
+.submit-error-modal .modal-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+  text-align: center;
+}
+
+.submit-error-modal .modal-content .error-log-wrap {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.submit-error-modal .modal-content .error-log-wrap:last-child {
+  margin-bottom: 0;
+}
+
+.submit-error-modal .modal-content .error-log-wrap .error-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  white-space: normal;
+}
+
+.submit-error-modal .modal-content .error-log-wrap .error-detail {
+  white-space: normal;
+}
+
+.submit-error-modal .modal-button-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.submit-error-modal .modal-button-wrap .close-button {
+  cursor: pointer;
+  padding: 0.5rem 1.8rem;
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: none;
+  background-color: #000;
+  border: 1px solid #000;
+  color: #fff;
+  transition: all 0.2s ease-in;
+  border-radius: 2px;
+}
+
+.submit-error-modal .modal-button-wrap .close-button:hover {
+  background-color: #222;
+  border: 1px solid #222;
+}

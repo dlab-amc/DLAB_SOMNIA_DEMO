@@ -1,0 +1,55 @@
+Input Parameter,ASAN,ABC,APPLE,CFS,MESA,SHHS,SOF,WSC,Definition,Type,Unit,비고,Sensor
+eeg_f3,F3,F3,,,,,,,Left Frontal EEG,EEG,Unipolar,,Gold cup electrode
+eeg_f4,F4,F4,,,,,,,Right Frontal EEG,EEG,Unipolar,,Gold cup electrode
+eeg_c3,C3,C3,,C3,,,C3,,Left Central EEG,EEG,Unipolar,,Gold cup electrode
+eeg_c4,C4,C4,,C4,,,C4,,Right Central EEG,EEG,Unipolar,,Gold cup electrode
+eeg_o1,O1,O1,,,,,,,Left Occipital EEG,EEG,Unipolar,,Gold cup electrode
+eeg_o2,O2,O2,,,,,,,Right Occipital EEG,EEG,Unipolar,,Gold cup electrode
+eeg_m1,M1,M1,,M1,,,A1,,Left Mastoid EEG,EEG,기준 (reference) ,,Gold cup electrode
+eeg_m2,M2,M2,,M2,,,A2,,Right Mastoid EEG,EEG,기준 (reference) ,,Gold cup electrode
+eeg_f3_m2,,,,,,,,F3_M2,Left Frontal to Right Mastoid EEG,EEG,Bipolar,,Gold cup electrode
+eeg_fz_m2,,,,,,,,Fz_M2,Frontal Central to Right Mastoid EEG,EEG,Bipolar,,Gold cup electrode
+eeg_c3_m2,,,C3_M2,,,EEG(sec): C3-A2,,C3_M2,Left Central to Right Mastoid EEG,EEG,Bipolar,,Gold cup electrode
+eeg_c4_m1,,,C4_M1,,EEG3: C4-M1,EEG: C4-A1,,,Right Central to Left Mastoid EEG,EEG,Bipolar,,Gold cup electrode
+eeg_cz_m2,,,,,,,,Cz_M2,Central to Right Mastoid EEG,EEG,Bipolar,,Gold cup electrode
+eeg_o1_m2,,,O1_M2,,,,,O1_M2,Left Occipital to Right Mastoid EEG,EEG,Bipolar,,Gold cup electrode
+eeg_o2_m1,,,O2_M1,,,,,,Right Occipital to Left Mastoid EEG,EEG,Bipolar,,
+eeg_pz_m2,,,,,,,,Pz_M2,Parietal Central to Right Mastoid EEG,EEG,Bipolar,,Gold cup electrode
+eeg_fz_cz,,,,,EEG1: Fz-Cz,,,,Frontal to Central EEG,EEG,Bipolar,,Gold cup electrode
+eeg_cz_oz,,,,,EEG2: Cz-Oz,,,,Occipital to Central EEG,EEG,Bipolar,,Gold cup electrode
+eog_loc,LOC,E1,LOC: LOC-M2,LOC,EOG-L,EOG(L),LOC,E1,Left EOG,EOG,Unipolar,기준 (reference)  = Fpz,Gold cup electrode
+eog_roc,ROC,E2,ROC: ROC-M1,ROC,EOG-R,EOG(R),ROC,E2,Right EOG,EOG,Unipolar,,Gold cup electrode
+ecg_1,ECG-LA,ECG1,,ECG1,,,ECG1,,ECG1 (-) ,ECG,Unipolar,,Ag/AgCl patch
+ecg_2,ECG-RA,ECG2,,ECG2,,,ECG2,,ECG2 (+) ,ECG,Unipolar,,Ag/AgCl patch
+ecg_lead2_all,,,ECG,,EKG,ECG,,ECG,ECG lead II,ECG,Bipolar,,Ag/AgCl patch
+emg_lleg1,,LLeg1,,,,,,,Left Leg EMG (-) ,EMG,Unipolar,,Compumedics piezo leg leads
+emg_lleg2,,LLeg2,,,,,,,Left Leg EMG (+) ,EMG,Unipolar,,Compumedics piezo leg leads
+emg_lleg_all,LLEG+,,,L Leg,,,Leg/L,,"Left Leg EMG (-, +)",EMG,Bipolar,,Compumedics piezo leg leads
+emg_rleg1,,RLeg1,,,,,,,Right Leg EMG (-) ,EMG,Unipolar,,Compumedics piezo leg leads
+emg_rleg2,,RLeg2,,,,,,,Right Leg EMG (+),EMG,Unipolar,,Compumedics piezo leg leads
+emg_rleg_all,RLEG+,,,R Leg,,,Leg/R,,"Right Leg EMG (-, +)",EMG,Bipolar,,Compumedics piezo leg leads
+emg_chin_linked,,,,,EMG,,,cchin_l,Linked Center & Left Chin EMG,EMG,Bipolar,,Gold cup electrode
+emg_lchin,CHIN1,Chin2,,EMG2,,,L Chin,,Left Chin EMG,EMG,Unipolar,"ABC, CFS: Left Submentalis EMG",Gold cup electrode
+emg_rchin,CHIN2,Chin3,,EMG3,,,R Chin,,Right Chin EMG,EMG,Unipolar,"ABC, CFS: Right Submentalis EMG",Gold cup electrode
+emg_cchin,CHINz,Chin1,,EMG1,,,,,Center Chin EMG,EMG,Unipolar,,Gold cup electrode
+emg_subchin,,,EMG ,,,EMG,,,Submentalis EMG,EMG,Bipolar,,Gold cup electrode
+airflow,,Airflow,,Airflow,,"New Air, Airflow",Airflow,flow,Airflow,ETC,,"SHHS는 2개 New air, Airflow (alternate)",Compumedics thermistor
+abdomen,Abdomen,Abdo,abdomen,Abdo Effort,Abdo,Abdo RES,Abdominal,abdomen,Abdomen,ETC,,WSC: Abdominal IP,Compumedics Summit IP RIP
+thorax,Chest,Thorax,thorax,Thor Effort,Thor,Thor RES,Thoracic,thorax,Thorax,ETC,,WSC: Thoracic IP,Compumedics Summit IP RIP
+sum,Xsum,Sum,,Sum,,,,sum,Sum (=avg(Abdomen+Thorax)),ETC,,WSC: IP Sum,Compumedics Summit IP RIP
+snore,Snore-AC,Snore,snore,Snore,Snore,,,snore,Snore,ETC,,MESA는 sensor가 Nasal Cannula (vibratory),Compumedics snore mic
+position,Position,PosSensor,,Position,Pos,Position,Position,position,Position,ETC,,,Compumedics external position sensor
+oxstat,,Ox Status,,Ox Status,OxStatus,OX STAT,STAT,,Oximetry Status,ETC,,,Nonin 8000 sensor
+pulse,Pulse,Pulse,pulse,Pulse,,,,,Pulse,ETC,,,Nonin 8000 sensor
+spo2,SpO2,SpO2,SpO2,SpO2,SpO2,SaO2,SAO2,spo2,SpO2,ETC,,,Nonin 8000 sensor
+nasal_pressure,NasalPressure,Nasal Pressure,nasal_pres,Nasal Pres,Flow,,Cannula Flow,nas_pres,Nasal Pressure,ETC,,,Nasal cannula
+cpap_flow,,CPAP Flow,,,,,,,CPAP Flow,ETC,,,
+cpap_press,,CPAP Press,,,,,,,CPAP Pressure,ETC,,,
+pleth,"PPG, Plethysmogram",Pleth,,PlethWV,Pleth,,,,Plethysmography,ETC,,,Nonin 8000 sensor
+light,,Light,,,,Light,,,Light,ETC,,,
+manual_pos,,Manual Pos,,,,,,,Manual Pos,ETC,,,
+respiratory_rate,RR,Respiratory Rate,,,,,,,Respiratory Rate,ETC,,,
+thermistor,Thermisotr_AC,,thermistor,,"Aux_AC, Therm",,,,Thermistor,ETC,,"MESA: ThermiSense Nasal/oral thermistor, ThermiSense Nasal Cannula",
+hr,HeartRate,,,,HR,"H.R., PR",HR,,Heart Rate,ETC,,SHHS는 Heart Rate 변수가 두개인것으로,
+nasal_flow,,,,,,,,nasalflow,Nasal Airflow,ETC,,,
+oral_flow,,,,,,,,oralflow,Oral Airflow,ETC,,,

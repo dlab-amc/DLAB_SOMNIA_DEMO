@@ -1,0 +1,222 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap');
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('./assets/fonts/Pretendard-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('./assets/fonts/Pretendard-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('./assets/fonts/Pretendard-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('./assets/fonts/Pretendard-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('./assets/fonts/Pretendard-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-display: swap;
+}
+
+:root {
+  --color-brand: #0094ff;
+  --color-brand-hover: #1da1ff;
+  --color-text-muted: #6b7280;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --ease-out: cubic-bezier(0.33, 1, 0.68, 1);
+  --font-science-gothic: 'Science Gothic', 'Pretendard', sans-serif;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+#root {
+  width: 100%;
+  height: 100vh;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Pretendard', Pretendard, -apple-system, BlinkMacSystemFont,
+    system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
+    'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', sans-serif;
+}
+
+/* Reset CSS */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  border: none;
+}
+
+button:focus,
+button:active,
+input:focus,
+input:active,
+select:focus,
+select:active {
+  outline: none;
+  box-shadow: none;
+}
+
+input,
+button,
+textarea,
+select,
+option,
+.react-datepicker,
+figure,
+pre,
+code {
+  font-family: 'Pretendard', Pretendard, -apple-system, BlinkMacSystemFont,
+    system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
+    'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', sans-serif !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+ul,
+ol,
+li {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.label {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Loading Spinner */
+.loader {
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  text-indent: -9999em;
+  animation: loadingSpinner 1s infinite ease;
+  transform: translateZ(0);
+}
+
+code, pre {
+    white-space: pre !important;
+}
+
+/* 한 줄 말줄임이 필요한 영역에만 사용 */
+.single-line-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@keyframes loadingSpinner {
+  0%,
+  100% {
+    box-shadow: 0em -2.6em 0em 0em #aaa,
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.3),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.3),
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.3),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.3),
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.3),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.5),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0);
+  }
+  12.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0),
+      1.8em -1.8em 0 0em #aaa, 2.5em 0em 0 0em rgba(255, 255, 255, 0.3),
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.3),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.3),
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.3),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.3),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5);
+  }
+  25% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.5),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0), 2.5em 0em 0 0em #aaa,
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.3),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.3),
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.3),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.3),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.3);
+  }
+  37.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.3),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0), 1.75em 1.75em 0 0em #aaa,
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.3),
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.3),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.3),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.3),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.3),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.5),
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0), 0em 2.5em 0 0em #aaa,
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.3),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.3),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.3);
+  }
+  62.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.3),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.3),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.3),
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.5),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0), -1.8em 1.8em 0 0em #aaa,
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.3),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.3);
+  }
+  75% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.3),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.3),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.3),
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.3),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.5),
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0), -2.6em 0em 0 0em #aaa,
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.3);
+  }
+  87.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.3),
+      1.8em -1.8em 0 0em rgba(255, 255, 255, 0.3),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.3),
+      1.75em 1.75em 0 0em rgba(255, 255, 255, 0.3),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.3),
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.5),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0), -1.8em -1.8em 0 0em #aaa;
+  }
+}
