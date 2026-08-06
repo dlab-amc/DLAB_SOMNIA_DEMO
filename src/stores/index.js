@@ -9,7 +9,7 @@ import commonSlice from "./common/common.slice";
 import i18nSlice from "./i18n/i18n.slice";
 
 const persistConfig = {
-  key: "root",
+  key: "somnia-ui-demo",
   storage: storageSession,
   whitelist: ["userSlice", "i18nSlice"],
 };
