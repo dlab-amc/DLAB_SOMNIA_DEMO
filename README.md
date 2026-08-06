@@ -8,9 +8,19 @@ This folder is separate from the runnable platform in `../SOMNIA`.
 1. Login (`Fakeuser1` / `Demo1234!`)
 2. Submit wizard (details → upload zip → parameters)
 3. Watch fake progress on the detail page (~8s to complete)
-4. Open the analysis report (PDF viewer)
+4. Open the analysis report (PDF viewer) — **sleep_stage_5** classification report (OPA / Kappa / confusion matrix), same layout as the real app
 
 Or open the seeded completed submit `SDEMO0001` from **Submit List** and jump straight to the report.
+
+### Upload zip
+
+Use `SOMNIA/examples/demo_submit` (`main.py` + `requirements.txt`) packed as a `.zip`.  
+Validation is mocked, but the demo treats it as **sleep_stage_5** (not AHI).
+
+### Age selection note
+
+- **Age cohort** (Adult / Pediatric) is selectable; pediatric age bands work in the demo.
+- Adult subgroup checkboxes are BMI / Severity / Race only — **Age is not a subgroup** in the real UI (age is chosen via cohort).
 
 ## Local
 

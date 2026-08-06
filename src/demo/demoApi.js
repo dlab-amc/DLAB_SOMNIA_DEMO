@@ -2,6 +2,7 @@ import {
   DEMO_ACCOUNTS,
   DEMO_TOKEN_ADMIN,
   DEMO_TOKEN_USER,
+  PEDIATRIC_BAND_COUNTS,
   SEED_SUBMIT_NUM,
   VALIDATION_OK,
   buildReportPayload,
@@ -90,16 +91,16 @@ function createSeedSubmit() {
       { name: 'main.py', size: 2048 },
       { name: 'requirements.txt', size: 128 },
     ],
-    input_var_list: ['ECG', 'SpO2'],
-    output_var_list: ['ahi'],
-    selected_subgroups: ['bmi', 'age'],
+    input_var_list: ['eeg_c3_m2', 'eeg_c4_m1'],
+    output_var_list: ['sleep_stage_5'],
+    selected_subgroups: ['bmi', 'severity'],
     age_cohort: 'adult',
     sampling_mode: 'manual',
     target_sample_size: 120,
-    primary_parameter: 'ahi',
-    alpha: 0.05,
+    primary_parameter: 'accuracy',
+    alpha: 0.025,
     power: 0.8,
-    sigma: 10,
+    sigma: 6.4,
     delta: 5,
   };
 }
@@ -206,14 +207,7 @@ export function handleDemoRequest({ method = 'GET', url, data, headers }) {
   if (m === 'GET' && path.includes('/answers/pediatric_band_counts')) {
     return {
       status: 200,
-      data: ok({
-        counts: {
-          '0-1': 40,
-          '1-5': 55,
-          '5-12': 70,
-          '12-18': 60,
-        },
-      }),
+      data: ok({ counts: { ...PEDIATRIC_BAND_COUNTS } }),
     };
   }
   if (m === 'POST' && path.includes('/answers/get_sample_size')) {
@@ -233,16 +227,20 @@ export function handleDemoRequest({ method = 'GET', url, data, headers }) {
     const description =
       readFormValue(data, 'submit_description') || 'Interactive demo submission';
     const input_var_list = parseJsonField(readFormValue(data, 'input_var_list'), [
-      'ECG',
-      'SpO2',
+      'eeg_c3_m2',
+      'eeg_c4_m1',
     ]);
     const output_var_list = parseJsonField(
       readFormValue(data, 'output_var_list'),
-      ['ahi']
+      ['sleep_stage_5']
     );
     const selected_subgroups = parseJsonField(
       readFormValue(data, 'selected_subgroups'),
-      ['bmi', 'age']
+      []
+    );
+    const pediatric_age_bands = parseJsonField(
+      readFormValue(data, 'pediatric_age_bands'),
+      null
     );
     const createdAt = nowIso();
     const submit = {
@@ -262,17 +260,20 @@ export function handleDemoRequest({ method = 'GET', url, data, headers }) {
       input_var_list,
       output_var_list,
       selected_subgroups,
+      pediatric_age_bands,
       age_cohort: String(readFormValue(data, 'age_cohort') || 'adult'),
       sampling_mode: String(readFormValue(data, 'sampling_mode') || 'manual'),
       target_sample_size:
         Number(readFormValue(data, 'target_sample_size')) || 120,
       primary_parameter: String(
-        readFormValue(data, 'primary_parameter') || 'ahi'
+        readFormValue(data, 'primary_parameter') || 'accuracy'
       ),
-      alpha: readFormValue(data, 'alpha') || 0.05,
+      alpha: readFormValue(data, 'alpha') || 0.025,
       power: readFormValue(data, 'power') || 0.8,
-      sigma: readFormValue(data, 'sigma') || 10,
+      sigma: readFormValue(data, 'sigma') || 6.4,
       delta: readFormValue(data, 'delta') || 5,
+      used_preset: String(readFormValue(data, 'used_preset') || '') === 'true',
+      preset_key: String(readFormValue(data, 'preset_key') || ''),
     };
     state.submits.unshift(submit);
     return {
