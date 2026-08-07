@@ -50,3 +50,5 @@ With HashRouter, URLs look like:
 
 - No FastAPI / Mongo / Redis / worker — evaluation is simulated.
 - The production Code Availability stack remains in `../SOMNIA` (Docker Compose).
+- Backend seed files `../SOMNIA/data/mongo-init/*_results.json` are **dummy public seeds** (10 rows/cohort, short 8-epoch `sleep_stage_*`). They are used by the Docker platform, not by this static Pages demo.
+- Full-night clinical answer dumps are **not** shipped in the public snapshot.
