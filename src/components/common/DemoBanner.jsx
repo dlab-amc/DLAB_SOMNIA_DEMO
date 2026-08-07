@@ -19,7 +19,7 @@ const DemoBanner = () => (
   <div style={style} role="status">
     <strong>SOMNIA UI Demo</strong>
     {' — '}
-    mock data only (no real evaluation). Login:{' '}
+    mock data; submit fields auto-filled (just click Next / Submit). Login:{' '}
     <code>
       {DEMO_ACCOUNTS.user.login_id} / {DEMO_ACCOUNTS.user.login_pw}
     </code>

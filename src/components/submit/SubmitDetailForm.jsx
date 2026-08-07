@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import S from './SubmitDetailForm.styled';
 import { useAppDispatch, useAppSelector } from '../../assets/hooks/useRedux';
 import { changeInputField } from '../../stores/submit/submit.slice';
@@ -6,6 +6,8 @@ import ProgressBar from '../common/ProgressBar';
 import PrevNextBar from '../common/PrevNextBar';
 import { useI18n } from '../../assets/i18n';
 import { useSubmitPage } from '../../contexts/SubmitPageContext';
+import { isDemoMode } from '../../demo/isDemoMode';
+import { DEMO_SUBMIT_INFO } from '../../demo/autoFillSubmit';
 
 const SubmitDetailForm = () => {
   const { tf } = useI18n();
@@ -14,6 +16,28 @@ const SubmitDetailForm = () => {
   const { submitTitle, submitDescription } = useAppSelector(
     (state) => state.submitSlice.info
   );
+
+  // Demo: auto-fill title/description so the user only clicks Next
+  useEffect(() => {
+    if (!isDemoMode()) return;
+    if (!String(submitTitle ?? '').trim()) {
+      dispatch(
+        changeInputField({
+          name: 'submitTitle',
+          value: DEMO_SUBMIT_INFO.submitTitle,
+        })
+      );
+    }
+    if (!String(submitDescription ?? '').trim()) {
+      dispatch(
+        changeInputField({
+          name: 'submitDescription',
+          value: DEMO_SUBMIT_INFO.submitDescription,
+        })
+      );
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dispatch]);
   const [isGuideHover, setGuideHover] = useState({
     title: false,
     description: false,

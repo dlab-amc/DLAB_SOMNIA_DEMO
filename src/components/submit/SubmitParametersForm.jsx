@@ -42,6 +42,11 @@ import {
 import AgeCohortSection from "./parameters/AgeCohortSection";
 import SampleCriteriaSection from "./parameters/SampleCriteriaSection";
 import SubgroupSection from "./parameters/SubgroupSection";
+import { isDemoMode } from "../../demo/isDemoMode";
+import {
+  DEMO_MANUAL_SAMPLE_SIZE,
+  DEMO_SUBGROUPS,
+} from "../../demo/autoFillSubmit";
 
 const SubmitParametersForm = () => {
   const { tf } = useI18n();
@@ -111,14 +116,29 @@ const SubmitParametersForm = () => {
   };
 
   // 샘플링 모드: auto(비열등성 기반) / manual(사용자 지정)
-  const [samplingMode, setSamplingMode] = useState("auto");
-  const [manualSampleSize, setManualSampleSize] = useState("");
+  // Demo defaults to manual + prefilled N so Submit is enabled immediately
+  const [samplingMode, setSamplingMode] = useState(
+    isDemoMode() ? "manual" : "auto"
+  );
+  const [manualSampleSize, setManualSampleSize] = useState(
+    isDemoMode() ? DEMO_MANUAL_SAMPLE_SIZE : ""
+  );
+  const demoParamsFilledRef = useRef(false);
 
   const canonicalOrder = ["bmi", "severity", "race"];
   const getOrderedSubgroups = (arr) =>
     canonicalOrder.filter((k) => arr.map((v) => v.toLowerCase()).includes(k));
 
   const BACKEND_URL = process.env.REACT_APP_ENDPOINT_URL;
+
+  // Demo: pre-select showcase subgroups (BMI / Severity / Race)
+  useEffect(() => {
+    if (!isDemoMode() || demoParamsFilledRef.current) return;
+    demoParamsFilledRef.current = true;
+    setSelectedSubgroups([...DEMO_SUBGROUPS]);
+    setSamplingMode("manual");
+    setManualSampleSize(DEMO_MANUAL_SAMPLE_SIZE);
+  }, []);
 
   useEffect(() => {
     if (!token) return;

@@ -28,6 +28,8 @@ import PrevNextBar from '../common/PrevNextBar';
 import { useI18n } from '../../assets/i18n';
 import { useSubmitPage } from '../../contexts/SubmitPageContext';
 import { getLocalizedErrorMessage } from '../../assets/data/errorMessages';
+import { isDemoMode } from '../../demo/isDemoMode';
+import { createDemoZipFile } from '../../demo/autoFillSubmit';
 
 /** 서버에서 받은 상대 경로 배열로 폴더/파일 트리 구조 생성 */
 function buildPathTree(paths) {
@@ -172,6 +174,7 @@ const SubmitUploadForm = () => {
   const lastDropAtRef = useRef(0);
 
   const BACKEND_URL = process.env.REACT_APP_ENDPOINT_URL;
+  const demoAutoUploadRef = useRef(false);
 
   const handleDropArchive = useCallback(
     async (acceptedFiles) => {
@@ -294,6 +297,19 @@ const SubmitUploadForm = () => {
     },
     [token, dispatch, BACKEND_URL, tf]
   );
+
+  // Demo: auto-upload a placeholder zip + run mock validation
+  useEffect(() => {
+    if (!isDemoMode()) return;
+    if (demoAutoUploadRef.current) return;
+    if (!token) return;
+    if (files.some((f) => f.name.toLowerCase().endsWith('.zip'))) return;
+    if (!String(submitTitle ?? '').trim() || !String(submitDescription ?? '').trim()) {
+      return;
+    }
+    demoAutoUploadRef.current = true;
+    handleDropArchive([createDemoZipFile()]);
+  }, [token, files, submitTitle, submitDescription, handleDropArchive]);
 
   const preventDefaults = useCallback((e) => {
     e.preventDefault();
