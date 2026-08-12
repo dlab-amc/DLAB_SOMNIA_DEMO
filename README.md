@@ -3,6 +3,12 @@
 Static front-end demo of the SOMNIA core flow with **mock API data**.  
 This folder is separate from the runnable platform in `../SOMNIA`.
 
+## Live demo
+
+https://dlab-amc.github.io/DLAB_SOMNIA_DEMO/#/login
+
+Repo: https://github.com/dlab-amc/DLAB_SOMNIA_DEMO
+
 ## What you can try
 
 1. Login (`Fakeuser1` / `Demo1234!`)
@@ -32,19 +38,17 @@ npm start
 
 Open http://localhost:3000
 
-## Build for GitHub Pages (project site `/SOMNIA_DEMO_TEST`)
+## Build for GitHub Pages (project site `/DLAB_SOMNIA_DEMO`)
 
 ```bash
 npm run build
 ```
 
-Deploy the `build/` folder to GitHub Pages (or push this folder as its own repo / `gh-pages` branch).
-
-Repo: https://github.com/ydon1111/SOMNIA_DEMO_TEST
+Push to `main` deploys via GitHub Actions (`.github/workflows/gh-pages.yml`).
 
 With HashRouter, URLs look like:
 
-`https://ydon1111.github.io/SOMNIA_DEMO_TEST/#/login`
+`https://dlab-amc.github.io/DLAB_SOMNIA_DEMO/#/login`
 
 ## Notes
 

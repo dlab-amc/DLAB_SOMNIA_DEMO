@@ -30,7 +30,7 @@
   },
   "scripts": {
     "start": "cross-env REACT_APP_ENDPOINT_URL=https://demo.local react-scripts start",
-    "build": "cross-env REACT_APP_ENDPOINT_URL=https://demo.local PUBLIC_URL=/SOMNIA_DEMO_TEST react-scripts build",
+    "build": "cross-env DISABLE_ESLINT_PLUGIN=true REACT_APP_ENDPOINT_URL=https://demo.local PUBLIC_URL=/DLAB_SOMNIA_DEMO react-scripts build",
     "build:root": "cross-env REACT_APP_ENDPOINT_URL=https://demo.local PUBLIC_URL=/ react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
