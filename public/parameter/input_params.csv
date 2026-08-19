@@ -40,7 +40,7 @@ movement_leg,Linked Left & Right Leg Movement Sensor,Limb movement,64
 movement_lleg,Left Leg Movement Sensor,Limb movement,64
 movement_rleg,Right Leg Movement Sensor,Limb movement,64
 airflow,Airflow,Airflow,32
-cannula_flow,Cannula flow,Airlflow,32
+cannula_flow,Cannula flow,Airflow,32
 nasal_pressure,Nasal Pressure,Airflow,32
 cpap_flow,CPAP Flow,Airflow,32
 cpap_press,CPAP Pressure,Airflow,32
@@ -54,7 +54,7 @@ sao2,SaO2,O2 saturation,1
 pleth,Plethysmography,O2 saturation,256
 abdomen,Abdomen,Respiratory,32
 thorax,Thorax,Respiratory,32
-sum,Caculated as the mean of Abdomen and Thorax,Respiratory,32
+sum,Calculated as the mean of abdomen and thorax,Respiratory,32
 snore,Snore,Respiratory,256
 position,Position,Position,1
 hr,Heart Rate,Other,1

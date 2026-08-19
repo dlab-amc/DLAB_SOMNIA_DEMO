@@ -110,6 +110,8 @@ alma_num,Number of alternating leg muscle activations,Movement
 alma_idx,Number of alternating leg muscle activations per hour of sleep,Movement
 hft_num,Number of hypnagogic foot tremors,Movement
 hft_idx,Number of hypnagogic foot tremors per hour of sleep,Movement
+active_move_num,Number of active movements,Movement
+active_move_idx,Number of active movements per hour of sleep,Movement
 average_heart_rate_during_sleep,average heart rate during total sleep time,Cardiac
 average_heart_rate_during_recording,average heart rate during total recording time,Cardiac
 highest_heart_rate_during_sleep,max heart rate during total sleep time,Cardiac
