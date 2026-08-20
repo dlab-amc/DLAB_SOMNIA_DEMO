@@ -1,0 +1,60 @@
+Input Parameter Name,Definition,Type,Harmonized sampling rate (Hz)
+eeg_f3,Left Frontal EEG,EEG,128
+eeg_f4,Right Frontal EEG,EEG,128
+eeg_c3,Left Central EEG,EEG,128
+eeg_c4,Right Central EEG,EEG,128
+eeg_o1,Left Occipital EEG,EEG,128
+eeg_o2,Right Occipital EEG,EEG,128
+eeg_m1,Left Mastoid EEG,EEG,128
+eeg_m2,Right Mastoid EEG,EEG,128
+eeg_p3,Left Parietal EEG,EEG,128
+eeg_p4,Right Parietal EEG,EEG,128
+eeg_f3_m2,Left Frontal to Right Mastoid EEG,EEG,128
+eeg_fz_m2,Frontal Central to Right Mastoid EEG,EEG,128
+eeg_c3_m2,Left Central to Right Mastoid EEG,EEG,128
+eeg_c4_m1,Right Central to Left Mastoid EEG,EEG,128
+eeg_cz_m2,Central to Right Mastoid EEG,EEG,128
+eeg_o1_m2,Left Occipital to Right Mastoid EEG,EEG,128
+eeg_o2_m1,Right Occipital to Left Mastoid EEG,EEG,128
+eeg_pz_m2,Parietal Central to Right Mastoid EEG,EEG,128
+eeg_fz_cz,Frontal to Central EEG,EEG,128
+eeg_cz_oz,Occipital to Central EEG,EEG,128
+eog_loc,Left EOG,EOG,128
+eog_roc,Right EOG,EOG,128
+ecg_1,ECG1 (-),ECG,128
+ecg_2,ECG2 (+),ECG,128
+ecg_lead2_all,ECG lead II,ECG,128
+emg_lchin,Left Chin EMG,Chin EMG,256
+emg_rchin,Right Chin EMG,Chin EMG,256
+emg_cchin,Center Chin EMG,Chin EMG,256
+emg_subchin,Submentalis EMG,Chin EMG,256
+emg_chin_linked,Linked Center & Left Chin EMG,Chin EMG,256
+emg_leg,Linked Left & Right Leg EMG,Leg EMG,256
+emg_lleg1,Left Leg EMG (-),Leg EMG,256
+emg_lleg2,Left Leg EMG (+),Leg EMG,256
+emg_lleg_all,"Left Leg EMG (-, +)",Leg EMG,256
+emg_rleg1,Right Leg EMG (-),Leg EMG,256
+emg_rleg2,Right Leg EMG (+),Leg EMG,256
+emg_rleg_all,"Right Leg EMG (-, +)",Leg EMG,256
+movement_leg,Linked Left & Right Leg Movement Sensor,Limb movement,64
+movement_lleg,Left Leg Movement Sensor,Limb movement,64
+movement_rleg,Right Leg Movement Sensor,Limb movement,64
+airflow,Airflow,Airflow,32
+cannula_flow,Cannula flow,Airflow,32
+nasal_pressure,Nasal Pressure,Airflow,32
+cpap_flow,CPAP Flow,Airflow,32
+cpap_press,CPAP Pressure,Airflow,32
+thermistor,Thermistor,Airflow,32
+nasal_flow,Nasal Airflow,Airflow,32
+oral_flow,Oral Airflow,Airflow,32
+oxstat,Oximetry Status,O2 saturation,1
+pulse,Pulse,O2 saturation,1
+spo2,SpO2,O2 saturation,1
+sao2,SaO2,O2 saturation,1
+pleth,Plethysmography,O2 saturation,256
+abdomen,Abdomen,Respiratory,32
+thorax,Thorax,Respiratory,32
+sum,Calculated as the mean of abdomen and thorax,Respiratory,32
+snore,Snore,Respiratory,256
+position,Position,Position,1
+hr,Heart Rate,Other,1

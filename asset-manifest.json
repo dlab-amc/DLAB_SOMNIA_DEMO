@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/DLAB_SOMNIA_DEMO/static/css/main.d04588fd.css",
+    "main.js": "/DLAB_SOMNIA_DEMO/static/js/main.8782f486.js",
+    "static/media/Pretendard-ExtraBold.woff2": "/DLAB_SOMNIA_DEMO/static/media/Pretendard-ExtraBold.26df84c2b3b8cb8a4b0c.woff2",
+    "static/media/Pretendard-Bold.woff2": "/DLAB_SOMNIA_DEMO/static/media/Pretendard-Bold.0c6f5e225ff28f456183.woff2",
+    "static/media/Pretendard-SemiBold.woff2": "/DLAB_SOMNIA_DEMO/static/media/Pretendard-SemiBold.d5ded8ad2884e7855bb1.woff2",
+    "static/media/Pretendard-Medium.woff2": "/DLAB_SOMNIA_DEMO/static/media/Pretendard-Medium.a9645bebe1a0010e66dc.woff2",
+    "static/media/Pretendard-Regular.woff2": "/DLAB_SOMNIA_DEMO/static/media/Pretendard-Regular.38bed7de46e7b9049ced.woff2",
+    "static/media/user_home_bg1.webp": "/DLAB_SOMNIA_DEMO/static/media/user_home_bg1.7a0fc769ec21c9f7f2af.webp",
+    "static/media/Logo_Dark.svg": "/DLAB_SOMNIA_DEMO/static/media/Logo_Dark.0eed830c0b541321422dba58f2d72908.svg",
+    "static/media/step2.svg": "/DLAB_SOMNIA_DEMO/static/media/step2.e61460cb8d1040dfcb1fdeb77674c247.svg",
+    "static/media/asc.svg": "/DLAB_SOMNIA_DEMO/static/media/asc.0c41f640777f0d5f8a4846114a7d6d75.svg",
+    "static/media/desc.svg": "/DLAB_SOMNIA_DEMO/static/media/desc.4703604015990fa2aca220d7296b6e7d.svg",
+    "static/media/search.svg": "/DLAB_SOMNIA_DEMO/static/media/search.bc175dfa4f12a14d6b0ab15fafbcb49a.svg",
+    "static/media/info.svg": "/DLAB_SOMNIA_DEMO/static/media/info.5e772256a251318cb6204aaa9a43692a.svg",
+    "static/media/usertype1.svg": "/DLAB_SOMNIA_DEMO/static/media/usertype1.140f06729e4665ab643389c8c0456c6e.svg",
+    "static/media/step1.svg": "/DLAB_SOMNIA_DEMO/static/media/step1.ebd0e1ee2ea766568ae4c826f2df0067.svg",
+    "static/media/submit.svg": "/DLAB_SOMNIA_DEMO/static/media/submit.02f7de6ffaaf4df375f84e6b4fa360e1.svg",
+    "index.html": "/DLAB_SOMNIA_DEMO/index.html",
+    "static/media/usertype2.svg": "/DLAB_SOMNIA_DEMO/static/media/usertype2.5aac28eac8583e33c37c8bef10c649e9.svg",
+    "static/media/close.svg": "/DLAB_SOMNIA_DEMO/static/media/close.0b1bfd5da334ae628456c5680e5183dd.svg",
+    "static/media/calendar.svg": "/DLAB_SOMNIA_DEMO/static/media/calendar.24e259ba2eb80e4193801bfbb612b50c.svg",
+    "static/media/logout.svg": "/DLAB_SOMNIA_DEMO/static/media/logout.3e111b6673d9b83d58156b7e7a7759c3.svg",
+    "static/media/step3.svg": "/DLAB_SOMNIA_DEMO/static/media/step3.937cff5d5d1f34af0d6778fb83e4c455.svg",
+    "static/media/alarm.svg": "/DLAB_SOMNIA_DEMO/static/media/alarm.f2547341d7ccf76fc2a96ae40aa79ea9.svg",
+    "static/media/success.svg": "/DLAB_SOMNIA_DEMO/static/media/success.6f23c2c0719e5c6e2d5e54670a6d1b75.svg",
+    "static/media/failure.svg": "/DLAB_SOMNIA_DEMO/static/media/failure.e178ad78b0da37108d05e415f6d7d6ba.svg",
+    "static/media/download.svg": "/DLAB_SOMNIA_DEMO/static/media/download.fa6ce3a70d0496e3ef6bd7600de3c540.svg",
+    "static/media/check.svg": "/DLAB_SOMNIA_DEMO/static/media/check.5951289cf31df20687c47c1d320fdd62.svg",
+    "static/media/expand.svg": "/DLAB_SOMNIA_DEMO/static/media/expand.50eb7646bf2ae1d2c02a18de35ee8166.svg",
+    "main.d04588fd.css.map": "/DLAB_SOMNIA_DEMO/static/css/main.d04588fd.css.map",
+    "main.8782f486.js.map": "/DLAB_SOMNIA_DEMO/static/js/main.8782f486.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d04588fd.css",
+    "static/js/main.8782f486.js"
+  ]
+}
