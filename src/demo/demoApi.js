@@ -8,15 +8,10 @@ import {
   buildReportPayload,
   createShowcaseSubmit,
 } from './fixtures';
+import { LOG_MAP } from '../assets/data/submit';
 
-const LOG_KO = {
-  VENV_DONE: '가상 환경 설정 완료',
-  SAMPLE_DONE: '데이터 샘플링 완료',
-  USER_RUN_START: '사용자 코드 실행 중...',
-  USER_RUN_DONE: '사용자 코드 실행 완료',
-  USER_EVAL_START: '사용자 코드 평가 중...',
-  USER_EVAL_DONE: '사용자 코드 평가 완료',
-};
+/** English progress log text for the public demo (default UI language). */
+const demoLog = (key) => LOG_MAP[key][1];
 
 function nowIso() {
   return new Date().toISOString();
@@ -40,9 +35,9 @@ export function buildProgressForSubmit(submit) {
       log_data: {
         parameter_value: 'N/A',
         status_log: [
-          logEntry(LOG_KO.VENV_DONE, 'completed', -3000),
-          logEntry(LOG_KO.SAMPLE_DONE, 'completed', -1000),
-          logEntry(LOG_KO.USER_RUN_START, 'running', 0),
+          logEntry(demoLog('VENV_DONE'), 'completed', -3000),
+          logEntry(demoLog('SAMPLE_DONE'), 'completed', -1000),
+          logEntry(demoLog('USER_RUN_START'), 'running', 0),
         ],
       },
     };
@@ -53,10 +48,10 @@ export function buildProgressForSubmit(submit) {
       log_data: {
         parameter_value: 'N/A',
         status_log: [
-          logEntry(LOG_KO.VENV_DONE, 'completed', -7000),
-          logEntry(LOG_KO.SAMPLE_DONE, 'completed', -5000),
-          logEntry(LOG_KO.USER_RUN_DONE, 'completed', -2000),
-          logEntry(LOG_KO.USER_EVAL_START, 'running', 0),
+          logEntry(demoLog('VENV_DONE'), 'completed', -7000),
+          logEntry(demoLog('SAMPLE_DONE'), 'completed', -5000),
+          logEntry(demoLog('USER_RUN_DONE'), 'completed', -2000),
+          logEntry(demoLog('USER_EVAL_START'), 'running', 0),
         ],
       },
     };
@@ -68,10 +63,10 @@ export function buildProgressForSubmit(submit) {
     log_data: {
       parameter_value: 'N/A',
       status_log: [
-        logEntry(LOG_KO.VENV_DONE, 'completed', -12000),
-        logEntry(LOG_KO.SAMPLE_DONE, 'completed', -10000),
-        logEntry(LOG_KO.USER_RUN_DONE, 'completed', -6000),
-        logEntry(LOG_KO.USER_EVAL_DONE, 'completed', -1000),
+        logEntry(demoLog('VENV_DONE'), 'completed', -12000),
+        logEntry(demoLog('SAMPLE_DONE'), 'completed', -10000),
+        logEntry(demoLog('USER_RUN_DONE'), 'completed', -6000),
+        logEntry(demoLog('USER_EVAL_DONE'), 'completed', -1000),
       ],
     },
   };
@@ -140,7 +135,7 @@ export function handleDemoRequest({ method = 'GET', url, data, headers }) {
         error: {
           code: 'LOGIN_FAILED',
           message:
-            '아이디 또는 비밀번호가 올바르지 않습니다. (데모: Fakeuser1 / Demo1234!)',
+            'Invalid login ID or password. (Demo: Fakeuser1 / Demo1234!)',
         },
       },
     };
@@ -161,7 +156,7 @@ export function handleDemoRequest({ method = 'GET', url, data, headers }) {
         status: 401,
         error: {
           code: 'LOGIN_FAILED',
-          message: '관리자 로그인 실패 (데모 계정 확인)',
+          message: 'Admin login failed (check demo account).',
         },
       },
     };
@@ -271,10 +266,10 @@ export function handleDemoRequest({ method = 'GET', url, data, headers }) {
           log_data: {
             parameter_value: 'N/A',
             status_log: [
-              logEntry(LOG_KO.VENV_DONE, 'completed', -30000),
-              logEntry(LOG_KO.SAMPLE_DONE, 'completed', -25000),
-              logEntry(LOG_KO.USER_RUN_DONE, 'completed', -15000),
-              logEntry(LOG_KO.USER_EVAL_DONE, 'completed', -5000),
+              logEntry(demoLog('VENV_DONE'), 'completed', -30000),
+              logEntry(demoLog('SAMPLE_DONE'), 'completed', -25000),
+              logEntry(demoLog('USER_RUN_DONE'), 'completed', -15000),
+              logEntry(demoLog('USER_EVAL_DONE'), 'completed', -5000),
             ],
           },
         },
