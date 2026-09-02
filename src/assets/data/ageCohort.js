@@ -179,9 +179,9 @@ export const REPORT_ANALYSIS_PROCEDURE_EN =
   'Various evaluation metrics are calculated by comparing predicted results from user algorithms executed in individual virtual environments\nwith PSG test result data.';
 
 export const REPORT_DATASET_KO =
-  '본 분석에 사용된 데이터세트는 다음과 같습니다: ABC, APPLE, CFS, MESA, MrOS, SHHS, SOF, WSC.\n\n위 코호트는 NSRR 등 공개 PSG 데이터입니다. ASAN/AMC 임상 데이터는 공개 스냅샷에 포함되지 않습니다. 공통 수면 분석 파라미터를 정의하여 분석 시스템을 제공하며, 제공되는 생체신호는 각 채널마다 특정 신호로 리샘플링되어 사용자에게 제공됩니다.';
+  '본 분석에 사용된 데이터세트는 다음과 같습니다: ABC, APPLES, CFS, MESA, MrOS, SHHS, SOF, WSC.\n\n위 코호트는 NSRR 등 공개 PSG 데이터입니다. ASAN/AMC 임상 데이터는 공개 스냅샷에 포함되지 않습니다. 공통 수면 분석 파라미터를 정의하여 분석 시스템을 제공하며, 제공되는 생체신호는 각 채널마다 특정 신호로 리샘플링되어 사용자에게 제공됩니다.';
 export const REPORT_DATASET_EN =
-  'The datasets used in this analysis are as follows:\nABC, APPLE, CFS, MESA, MrOS, SHHS, SOF, WSC.\n\nThese cohorts are open-access PSG datasets (e.g. NSRR). ASAN/AMC clinical data is not included in this public snapshot.\nCommon sleep analysis parameters are defined to provide an analysis system.\nBiological signals are resampled to specific signals for each channel before being provided to users.';
+  'The datasets used in this analysis are as follows:\nABC, APPLES, CFS, MESA, MrOS, SHHS, SOF, WSC.\n\nThese cohorts are open-access PSG datasets (e.g. NSRR). ASAN/AMC clinical data is not included in this public snapshot.\nCommon sleep analysis parameters are defined to provide an analysis system.\nBiological signals are resampled to specific signals for each channel before being provided to users.';
 
 /** @deprecated use formatMinPediatricSampleKo */
 export const formatMinPediatricPerBandKo = formatMinPediatricSampleKo;

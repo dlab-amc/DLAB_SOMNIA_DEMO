@@ -1,4 +1,4 @@
-Input Parameter,ASAN,ABC,APPLE,CFS,MESA,SHHS,SOF,WSC,Definition,Type,Unit ,비고,Sensor
+Input Parameter,ASAN,ABC,APPLES,CFS,MESA,SHHS,SOF,WSC,Definition,Type,Unit ,비고,Sensor
 eeg_f3,F3,F3,,,,,,,Left Frontal EEG,EEG,Unipolar,,Gold cup electrode
 eeg_f4,F4,F4,,,,,,,Right Frontal EEG,EEG,Unipolar,,Gold cup electrode
 eeg_c3,C3,C3,,C3,,,C3,,Left Central EEG,EEG,Unipolar,,Gold cup electrode
