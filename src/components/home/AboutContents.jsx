@@ -33,6 +33,21 @@ const AboutContents = () => {
 
         <div className='about-paragraph'>
           <p className='line'>
+            {tf(
+              '공개 스냅샷의 시뮬레이터 데이터는 NSRR 등 공개 코호트 PSG(ABC, APPLES, CFS, MESA, MrOS, SHHS, SOF, WSC)로 구성됩니다.',
+              'This public snapshot uses open-cohort PSG data such as NSRR (ABC, APPLES, CFS, MESA, MrOS, SHHS, SOF, WSC).'
+            )}
+          </p>
+          <p className='line'>
+            {tf(
+              'ASAN/AMC 임상 데이터는 공개 스냅샷에 포함되지 않습니다.',
+              'ASAN/AMC clinical data is not included in this public snapshot.'
+            )}
+          </p>
+        </div>
+
+        <div className='about-paragraph'>
+          <p className='line'>
             {tf('연구자가 개발한 수면 분석 모델이나 알고리즘을 제출하면,', 'When researchers submit their sleep analysis models or algorithms,')}
           </p>
           <p className='line'>
