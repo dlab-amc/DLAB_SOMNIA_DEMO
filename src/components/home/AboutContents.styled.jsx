@@ -48,11 +48,13 @@ S.Container = styled.div`
 
     .about-paragraph {
       font-size: clamp(15px, 2.6vw, 17px);
-      line-height: 1.65;
+      line-height: 1.7;
       font-weight: 500;
-      margin-bottom: 1.75rem;
+      margin: 0 0 1.75rem;
       text-align: center;
       letter-spacing: -0.01em;
+      word-break: keep-all;
+      overflow-wrap: break-word;
 
       &:last-child {
         margin-bottom: 0;
@@ -65,7 +67,7 @@ S.Container = styled.div`
     color: ${slate500};
     padding-bottom: 2rem;
 
-    .desc-wrap {
+    .desc {
       margin: 0 auto;
       width: 100%;
       max-width: 36rem;
@@ -75,21 +77,14 @@ S.Container = styled.div`
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
       box-sizing: border-box;
-    }
-
-    .desc {
       font-size: 15px;
       font-weight: 600;
       line-height: 1.6;
       color: ${slate600};
       word-break: break-word;
-      white-space: pre-line;
-      margin: 0;
     }
 
     .number {
-      display: inline-block;
-      margin-top: 0.35rem;
       font-size: 13px;
       font-weight: 500;
       color: ${slate500};
