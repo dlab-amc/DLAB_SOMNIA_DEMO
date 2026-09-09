@@ -85,6 +85,8 @@ S.Container = styled.div`
     }
 
     .number {
+      display: inline-block;
+      margin-top: 0.2rem;
       font-size: 13px;
       font-weight: 500;
       color: ${slate500};
