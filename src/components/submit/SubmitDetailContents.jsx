@@ -386,45 +386,17 @@ function SubmitDetailContents() {
                     </span>
                   </div>
                   <button
+                    type="button"
                     className="download-button"
-                    onClick={async () => {
-                      try {
-                        const res = await axios.get(
-                          `${BACKEND_URL}/submit/download/${submitData._id}/${submitNum}/${file.name}`,
-                          {
-                            headers: {
-                              Authorization: `Bearer ${authTokenRef.current}`,
-                            },
-                            responseType: 'blob',
-                          }
-                        );
-                        const blob = res.data;
-                        const url = window.URL.createObjectURL(blob);
-                        const link = document.createElement('a');
-                        link.href = url;
-                        link.setAttribute('download', file.name);
-                        document.body.appendChild(link);
-                        link.click();
-                        link.remove();
-                        window.URL.revokeObjectURL(url);
-                      } catch (error) {
-                        if (
-                          error?.response?.status === 401 ||
-                          isAuthErrorHandled(error)
-                        ) {
-                          authFailedRef.current = true;
-                          return;
-                        }
-                        dispatch(
-                          setVisibleModal({
-                            isVisible: true,
-                            title: tf('에러', 'Error'),
-                            text: tf('파일 다운로드에 실패하였습니다.', 'Failed to download file.'),
-                            isScrollable: false,
-                          })
-                        );
-                      }
-                    }}
+                    disabled
+                    title={tf(
+                      '데모에서는 파일 다운로드를 지원하지 않습니다.',
+                      'File download is not available in this demo.'
+                    )}
+                    aria-label={tf(
+                      '데모에서는 파일 다운로드를 지원하지 않습니다.',
+                      'File download is not available in this demo.'
+                    )}
                   >
                     <Download />
                   </button>

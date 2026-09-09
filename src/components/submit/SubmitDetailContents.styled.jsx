@@ -281,13 +281,18 @@ S.Container = styled.div`
             transition: fill 0.18s ease;
           }
 
-          &:hover {
+          &:hover:not(:disabled) {
             background-color: rgba(0, 148, 255, 0.08);
             border-color: rgba(0, 148, 255, 0.2);
 
             svg path {
               fill: #0094ff;
             }
+          }
+
+          &:disabled {
+            cursor: not-allowed;
+            opacity: 0.4;
           }
         }
 
