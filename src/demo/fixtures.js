@@ -20,6 +20,15 @@ export const DEMO_ACCOUNTS = {
   },
 };
 
+export const DEMO_USER_PROFILE = {
+  user_type: 'personal',
+  name: DEMO_ACCOUNTS.user.name,
+  phone_number: '01012345678',
+  email: DEMO_ACCOUNTS.user.email,
+  organization: DEMO_ACCOUNTS.user.organization,
+  business_info: null,
+};
+
 export const DEMO_TOKEN_USER = 'demo-user-token';
 export const DEMO_TOKEN_ADMIN = 'demo-admin-token';
 

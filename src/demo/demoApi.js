@@ -5,6 +5,7 @@ import {
   DEMO_TOKEN_ADMIN,
   DEMO_TOKEN_USER,
   DEMO_USER_NOTIFICATIONS,
+  DEMO_USER_PROFILE,
   PEDIATRIC_BAND_COUNTS,
   SEED_SUBMIT_NUM,
   VALIDATION_OK,
@@ -82,6 +83,7 @@ const state = {
     .length,
   unreadAdminCount: DEMO_ADMIN_NOTIFICATIONS.filter((n) => n.status === 'unread')
     .length,
+  userProfile: { ...DEMO_USER_PROFILE },
 };
 
 function ok(data, message = 'OK') {
@@ -417,6 +419,40 @@ export function handleDemoRequest({ method = 'GET', url, data, headers }) {
 
   if (m === 'GET' && path.includes('/user/list')) {
     return { status: 200, data: listPage([]) };
+  }
+
+  if (m === 'GET' && path.endsWith('/user/profile')) {
+    return {
+      status: 200,
+      data: ok({
+        user: state.userProfile,
+        submit: {
+          total_count: state.submits.length,
+          new_notification_count: state.unreadUserCount,
+        },
+      }),
+    };
+  }
+
+  if (m === 'PATCH' && path.endsWith('/user/profile')) {
+    const payload = typeof data === 'string' ? parseJsonField(data, {}) : data;
+    const newTel = readFormValue(payload, 'new_tel');
+    const newEmail = readFormValue(payload, 'new_email');
+    if (newTel) state.userProfile.phone_number = String(newTel);
+    if (newEmail) state.userProfile.email = String(newEmail);
+    return { status: 200, data: ok({}) };
+  }
+
+  if (m === 'POST' && path.endsWith('/check/tel')) {
+    return { status: 200, data: ok({ unique: true }) };
+  }
+
+  if (m === 'PATCH' && path.endsWith('/user/password')) {
+    return { status: 200, data: ok({}) };
+  }
+
+  if (m === 'POST' && path.endsWith('/user/account/quit')) {
+    return { status: 200, data: ok({}) };
   }
 
   return {
