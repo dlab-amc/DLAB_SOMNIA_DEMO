@@ -80,14 +80,18 @@ const AboutContents = () => {
             isEn
               ? [
                   'This work was supported by the Ministry of Food and Drug Safety,',
-                  'Republic of Korea.',
+                  <span key='grant'>
+                    Republic of Korea.{' '}
+                    <span className='number'>(No. RS-2023-00215716).</span>
+                  </span>,
                 ]
               : [
-                  '본 연구는 2023년 식품의약품안전처 지원을 받아 수행하였음.',
+                  <span key='grant'>
+                    본 연구는 2023년 식품의약품안전처 지원을 받아 수행하였음.{' '}
+                    <span className='number'>(No. RS-2023-00215716).</span>
+                  </span>,
                 ]
           )}
-          <br />
-          <span className='number'>(No. RS-2023-00215716).</span>
         </p>
       </div>
     </S.Container>
