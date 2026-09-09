@@ -1,8 +1,10 @@
 import {
   DEMO_ACCOUNTS,
+  DEMO_ADMIN_NOTIFICATIONS,
   DEMO_AUTH_CODE,
   DEMO_TOKEN_ADMIN,
   DEMO_TOKEN_USER,
+  DEMO_USER_NOTIFICATIONS,
   PEDIATRIC_BAND_COUNTS,
   SEED_SUBMIT_NUM,
   VALIDATION_OK,
@@ -76,6 +78,10 @@ export function buildProgressForSubmit(submit) {
 const state = {
   counter: 1,
   submits: [createShowcaseSubmit()],
+  unreadUserCount: DEMO_USER_NOTIFICATIONS.filter((n) => n.status === 'unread')
+    .length,
+  unreadAdminCount: DEMO_ADMIN_NOTIFICATIONS.filter((n) => n.status === 'unread')
+    .length,
 };
 
 function ok(data, message = 'OK') {
@@ -208,11 +214,43 @@ export function handleDemoRequest({ method = 'GET', url, data, headers }) {
     return { status: 200, data: ok({}) };
   }
 
+  if (m === 'GET' && path.endsWith('/notification/user/read')) {
+    state.unreadUserCount = 0;
+    return { status: 200, data: ok({}) };
+  }
+  if (m === 'GET' && path.endsWith('/notification/admin/read')) {
+    state.unreadAdminCount = 0;
+    return { status: 200, data: ok({}) };
+  }
+  if (m === 'GET' && path.includes('/notification/count/admin')) {
+    return {
+      status: 200,
+      data: ok({ new_notification_count: state.unreadAdminCount }),
+    };
+  }
   if (m === 'GET' && path.includes('/notification/count')) {
-    return { status: 200, data: ok({ new_notification_count: 0 }) };
+    return {
+      status: 200,
+      data: ok({ new_notification_count: state.unreadUserCount }),
+    };
+  }
+  if (m === 'GET' && path.includes('/notification/admin/all')) {
+    const history = DEMO_USER_NOTIFICATIONS.map((n) => ({
+      from_info: {
+        from: n.from_id === 'SYS' ? 'system' : 'admin',
+        login_id: n.from_id === 'SYS' ? null : n.from_id,
+      },
+      to_info: { to: 'user', login_id: n.to_id },
+      sent_time: n.sent_time,
+      message: n.message,
+    }));
+    return { status: 200, data: listPage(history) };
+  }
+  if (m === 'GET' && path.endsWith('/notification/admin')) {
+    return { status: 200, data: listPage(DEMO_ADMIN_NOTIFICATIONS) };
   }
   if (m === 'GET' && path.includes('/notification')) {
-    return { status: 200, data: listPage([]) };
+    return { status: 200, data: listPage(DEMO_USER_NOTIFICATIONS) };
   }
 
   if (m === 'GET' && path.includes('/answers/pediatric_band_counts')) {

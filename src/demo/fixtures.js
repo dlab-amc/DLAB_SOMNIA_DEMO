@@ -25,6 +25,60 @@ export const DEMO_TOKEN_ADMIN = 'demo-admin-token';
 
 export const SEED_SUBMIT_NUM = 'SDEMO0001';
 
+function hoursAgoIso(hours) {
+  return new Date(Date.now() - hours * 3600 * 1000).toISOString();
+}
+
+/** Sample inbox rows for the demo Notifications page (LOG_MAP English bodies localize). */
+export const DEMO_USER_NOTIFICATIONS = [
+  {
+    from_id: 'SYS',
+    to_id: DEMO_ACCOUNTS.user.login_id,
+    sent_time: hoursAgoIso(1),
+    message: `${SEED_SUBMIT_NUM}: User code evaluation completed`,
+    status: 'unread',
+  },
+  {
+    from_id: 'SYS',
+    to_id: DEMO_ACCOUNTS.user.login_id,
+    sent_time: hoursAgoIso(3),
+    message: `${SEED_SUBMIT_NUM}: User code execution completed`,
+    status: 'unread',
+  },
+  {
+    from_id: 'SYS',
+    to_id: DEMO_ACCOUNTS.user.login_id,
+    sent_time: hoursAgoIso(6),
+    message: `${SEED_SUBMIT_NUM}: Data sampling complete`,
+    status: 'read',
+  },
+  {
+    from_id: DEMO_ACCOUNTS.admin.login_id,
+    to_id: DEMO_ACCOUNTS.user.login_id,
+    sent_time: hoursAgoIso(26),
+    message:
+      'Your submission has been reviewed. You can open the performance report.',
+    status: 'read',
+  },
+];
+
+export const DEMO_ADMIN_NOTIFICATIONS = [
+  {
+    from_id: 'SYS',
+    to_id: DEMO_ACCOUNTS.admin.login_id,
+    sent_time: hoursAgoIso(2),
+    message: `${SEED_SUBMIT_NUM}: User code evaluation completed`,
+    status: 'unread',
+  },
+  {
+    from_id: 'SYS',
+    to_id: DEMO_ACCOUNTS.admin.login_id,
+    sent_time: hoursAgoIso(8),
+    message: `${SEED_SUBMIT_NUM}: Data sampling complete`,
+    status: 'read',
+  },
+];
+
 /** Matches examples/demo_submit validation shape. */
 export const VALIDATION_OK = {
   status: 200,
