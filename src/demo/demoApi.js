@@ -1,5 +1,6 @@
 import {
   DEMO_ACCOUNTS,
+  DEMO_AUTH_CODE,
   DEMO_TOKEN_ADMIN,
   DEMO_TOKEN_USER,
   PEDIATRIC_BAND_COUNTS,
@@ -172,6 +173,39 @@ export function handleDemoRequest({ method = 'GET', url, data, headers }) {
         create_time: '2024-01-15T00:00:00.000Z',
       }),
     };
+  }
+
+  if (m === 'POST' && path.endsWith('/check/auth')) {
+    const payload = typeof data === 'string' ? parseJsonField(data, {}) : data;
+    const code = String(readFormValue(payload, 'auth_number') || '').trim();
+    if (code === DEMO_AUTH_CODE) {
+      return { status: 200, data: ok({ verified: true }) };
+    }
+    return {
+      status: 400,
+      data: {
+        status: 400,
+        error: {
+          code: 'AUTH_FAILED',
+          message: `Invalid verification code. This demo does not send email — use ${DEMO_AUTH_CODE}.`,
+        },
+      },
+    };
+  }
+
+  if (
+    m === 'POST' &&
+    (path.endsWith('/user/password/auth') || path.endsWith('/auth'))
+  ) {
+    return { status: 200, data: ok({ demo_code: DEMO_AUTH_CODE }) };
+  }
+
+  if (m === 'POST' && path.endsWith('/password/find')) {
+    return { status: 200, data: ok({}) };
+  }
+
+  if (m === 'PATCH' && path.endsWith('/password/find')) {
+    return { status: 200, data: ok({}) };
   }
 
   if (m === 'GET' && path.includes('/notification/count')) {

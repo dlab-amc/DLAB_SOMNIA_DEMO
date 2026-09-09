@@ -2,11 +2,15 @@
  * Sampling coverage counts == used stratum n (Percent Used ≈ 100%, same as generate_subgroup_reports).
  */
 
+/** 6-digit code shown in Find Password — this demo never sends email. */
+export const DEMO_AUTH_CODE = '123456';
+
 export const DEMO_ACCOUNTS = {
   user: {
     login_id: 'Fakeuser1',
     login_pw: 'Demo1234!',
     name: 'Hong Gildong',
+    email: 'fakeuser1@example.com',
     organization: 'Ulsan University',
   },
   admin: {

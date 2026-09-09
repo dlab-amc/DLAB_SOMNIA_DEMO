@@ -11,6 +11,7 @@ import Loading from '../common/Loading';
 import Modal from '../common/Modal';
 import { VALID_CHECK_REGEX, FIND_FORM_INFO } from '../../assets/data/signup';
 import { useI18n } from '../../assets/i18n';
+import { DEMO_ACCOUNTS, DEMO_AUTH_CODE } from '../../demo/fixtures';
 
 const FindForm = ({ type }) => {
   const { tf } = useI18n();
@@ -19,8 +20,8 @@ const FindForm = ({ type }) => {
   const [inputValues, setInputValues] = useState({
     findIdName: '',
     findIdEmail: '',
-    findPasswordId: '',
-    findPasswordEmail: '',
+    findPasswordId: DEMO_ACCOUNTS.user.login_id,
+    findPasswordEmail: DEMO_ACCOUNTS.user.email,
     findPasswordAuth: '',
   });
   const [isAuthMailSent, setAuthMailSent] = useState(false);
@@ -123,7 +124,13 @@ const FindForm = ({ type }) => {
         `${BACKEND_URL}/user/password/auth`,
         params
       );
-      if (response.data.status === 200) setAuthMailSent(true);
+      if (response.data.status === 200) {
+        setAuthMailSent(true);
+        setInputValues((prev) => ({
+          ...prev,
+          findPasswordAuth: DEMO_AUTH_CODE,
+        }));
+      }
 
       dispatch(setLoading(false));
     } catch (error) {
@@ -178,13 +185,26 @@ const FindForm = ({ type }) => {
         <S.FormCard>
           <h2 className='find-title'>{tf(FIND_FORM_INFO[type].title, FIND_FORM_INFO[type].title_eng)}</h2>
           <p className='find-desc'>{tf(FIND_FORM_INFO[type].desc, FIND_FORM_INFO[type].desc_eng)}</p>
+          {type === 'password' && (
+            <p className='demo-notice'>
+              {tf(
+                `이 데모는 이메일을 발송하지 않습니다. 인증번호 전송 후 코드 ${DEMO_AUTH_CODE}을 사용하세요.`,
+                `This demo does not send email. After Send Code, use verification code ${DEMO_AUTH_CODE}.`
+              )}
+            </p>
+          )}
           <div className='inputs-wrap'>
         {FIND_FORM_INFO[type].inputs.map((input, index) => (
           <div className='input-wrap' key={index}>
             <label className='label' htmlFor={input.id}>
               {tf(input.label, input.label_eng)}
               {input.id === 'findPasswordEmail' && isAuthMailSent && (
-                <span className='message'>{tf('인증 메일이 발송되었습니다.', 'A verification email has been sent.')}</span>
+                <span className='message'>
+                  {tf(
+                    `메일은 발송되지 않습니다. 인증코드 ${DEMO_AUTH_CODE}이 입력란에 채워집니다.`,
+                    `No email is sent. Code ${DEMO_AUTH_CODE} is filled in below.`
+                  )}
+                </span>
               )}
               {input.id === 'findPasswordAuth' && isAuthMailChecked && (
                 <span className='message'>{tf('인증이 완료되었습니다.', 'Verification completed.')}</span>

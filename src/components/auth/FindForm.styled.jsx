@@ -67,6 +67,21 @@ S.FormCard = styled.div`
     letter-spacing: -0.01em;
   }
 
+  .demo-notice {
+    width: 100%;
+    margin: -1.1rem 0 1.75rem;
+    padding: 0.75rem 0.9rem;
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: 8px;
+    color: #0c4a6e;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: left;
+    box-sizing: border-box;
+  }
+
   .inputs-wrap {
     width: 100%;
     margin-bottom: 1.85rem;
