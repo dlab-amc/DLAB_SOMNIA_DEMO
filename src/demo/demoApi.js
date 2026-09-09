@@ -164,6 +164,16 @@ export function handleDemoRequest({ method = 'GET', url, data, headers }) {
 
   void auth;
 
+  if (m === 'POST' && path.endsWith('/id/find')) {
+    return {
+      status: 200,
+      data: ok({
+        login_id: DEMO_ACCOUNTS.user.login_id,
+        create_time: '2024-01-15T00:00:00.000Z',
+      }),
+    };
+  }
+
   if (m === 'GET' && path.includes('/notification/count')) {
     return { status: 200, data: ok({ new_notification_count: 0 }) };
   }
