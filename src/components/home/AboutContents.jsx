@@ -20,11 +20,13 @@ const AboutContents = () => {
             isEn
               ? [
                   <strong key='brand' className='point'>{brand}</strong>,
-                  `is an algorithm evaluation platform built on an integrated database of ${countLabel} polysomnography and clinical datasets.`,
+                  'is an algorithm evaluation platform built on an integrated database',
+                  `of ${countLabel} polysomnography and clinical datasets.`,
                 ]
               : [
                   <strong key='brand' className='point'>{brand}는</strong>,
-                  `${countLabel}의 수면다원검사 및 임상 데이터를 통합한 데이터베이스를 바탕으로 구축된 알고리즘 검증 플랫폼입니다.`,
+                  `${countLabel}의 수면다원검사 및 임상 데이터를 통합한`,
+                  '데이터베이스를 바탕으로 구축된 알고리즘 검증 플랫폼입니다.',
                 ]
           )}
         </p>
