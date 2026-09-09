@@ -1,18 +1,24 @@
 import styled from 'styled-components';
 const S = {};
 
-S.Container = styled.div``;
+S.Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+`;
 
 S.MainContents = styled.div`
   width: 100%;
-  height: calc(100vh - 65px - var(--demo-banner-h));
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: none;
 
   &.screenshot-page {
     padding: 0 0 1.5rem;
-    height: auto;
-    min-height: calc(100vh - var(--demo-banner-h));
   }
-  overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
 

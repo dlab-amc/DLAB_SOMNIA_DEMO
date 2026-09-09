@@ -50,8 +50,10 @@ import AuthRedirectWatcher from "./components/common/AuthRedirectWatcher";
 function App() {
   return (
     <HashRouter>
-      <DemoBanner />
-      <AuthRedirectWatcher />
+      <div className="app-shell">
+        <DemoBanner />
+        <AuthRedirectWatcher />
+        <div className="app-shell-main">
       <Routes>
         {/* 1. User */}
         <Route path="/" element={<UserLayout />}>
@@ -327,6 +329,8 @@ function App() {
         </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
+        </div>
+      </div>
     </HashRouter>
   );
 }

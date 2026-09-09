@@ -20,6 +20,7 @@ S.Container = styled.div`
   /* 툴팁이 헤더 아래로 넘칠 수 있게 */
   overflow: visible;
   position: relative;
+  flex-shrink: 0;
   z-index: 200;
 
   @media (max-width: 1280px) {

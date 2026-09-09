@@ -2,9 +2,7 @@ import React from 'react';
 import { DEMO_ACCOUNTS } from '../../demo/fixtures';
 
 const style = {
-  position: 'sticky',
-  top: 0,
-  zIndex: 2000,
+  flexShrink: 0,
   boxSizing: 'border-box',
   height: 'var(--demo-banner-h)',
   display: 'flex',

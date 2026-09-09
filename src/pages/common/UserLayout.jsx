@@ -83,18 +83,16 @@ const UserLayout = () => {
   };
 
   useEffect(() => {
-    // Prevent Modal Background Scroll
-    if (isVisibleModal) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-  }, [isVisibleModal]);
+    document.body.style.overflow = "hidden";
+  }, []);
 
   return (
     <S.Container>
       {!isScreenshotPage && <UserHeader />}
-      <S.MainContents className={isScreenshotPage ? 'screenshot-page' : undefined}>
+      <S.MainContents
+        className={isScreenshotPage ? 'screenshot-page' : undefined}
+        style={isVisibleModal ? { overflow: 'hidden' } : undefined}
+      >
         <Outlet />
       </S.MainContents>
     </S.Container>
