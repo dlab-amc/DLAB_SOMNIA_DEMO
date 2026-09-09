@@ -15,7 +15,7 @@ S.Container = styled.div`
   background-color: #fff;
   width: 100%;
   max-width: 1024px;
-  min-height: calc(100vh - 65px);
+  min-height: calc(100vh - 65px - var(--demo-banner-h));
   height: auto;
   margin: 0 auto;
   padding: clamp(2.75rem, 7vw, 4.5rem) 1.35rem clamp(4rem, 10vw, 6rem);

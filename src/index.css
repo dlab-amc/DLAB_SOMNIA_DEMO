@@ -40,6 +40,7 @@
   --radius-md: 8px;
   --ease-out: cubic-bezier(0.33, 1, 0.68, 1);
   --font-science-gothic: 'Science Gothic', 'Pretendard', sans-serif;
+  --demo-banner-h: 40px;
 }
 
 * {

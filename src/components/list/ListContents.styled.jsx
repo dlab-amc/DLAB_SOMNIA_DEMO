@@ -18,7 +18,7 @@ S.Container = styled.div`
     display: flex;
     flex-direction: column;
     height: 100%;
-    min-height: calc(100vh - 65px - 300px);
+    min-height: calc(100vh - 65px - var(--demo-banner-h) - 300px);
     min-width: 0;
     max-width: 100%;
     overflow: visible;

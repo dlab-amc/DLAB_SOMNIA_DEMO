@@ -5,7 +5,7 @@ S.Container = styled.div`
   width: 20%;
   padding: 2rem;
   background-color: #eee;
-  height: calc(100vh - 65px);
+  height: calc(100vh - 65px - var(--demo-banner-h));
 
   .sidebar-title {
     font-size: 26px;

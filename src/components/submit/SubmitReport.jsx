@@ -136,7 +136,7 @@ const SubmitReport = () => {
         <Box
           style={{
             width: "100%",
-            height: "100vh",
+            height: "calc(100vh - 65px - var(--demo-banner-h))",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",

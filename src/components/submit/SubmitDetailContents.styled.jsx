@@ -51,7 +51,7 @@ S.Container = styled.div`
 
   .container {
     width: 100%;
-    min-height: calc(100vh - 65px);
+    min-height: calc(100vh - 65px - var(--demo-banner-h));
     padding: 2rem 1.5rem 3rem;
     box-sizing: border-box;
 

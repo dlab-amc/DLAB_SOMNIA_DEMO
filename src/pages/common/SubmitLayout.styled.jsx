@@ -6,7 +6,7 @@ S.Container = styled.div`
 
   .contents {
     padding: 3rem;
-    height: calc(100vh - 65px - 60px);
+    height: calc(100vh - 65px - 60px - var(--demo-banner-h));
     width: 100%;
     overflow-y: auto;
   }

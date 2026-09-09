@@ -5,14 +5,22 @@ const style = {
   position: 'sticky',
   top: 0,
   zIndex: 2000,
+  boxSizing: 'border-box',
+  height: 'var(--demo-banner-h)',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
   width: '100%',
-  padding: '8px 16px',
+  padding: '0 16px',
   background: '#0f3d4c',
   color: '#f4fafb',
   fontSize: '13px',
   lineHeight: 1.4,
   textAlign: 'center',
   borderBottom: '1px solid rgba(255,255,255,0.12)',
+  whiteSpace: 'nowrap',
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
 };
 
 const DemoBanner = () => (

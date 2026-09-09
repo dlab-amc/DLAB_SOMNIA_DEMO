@@ -6,7 +6,7 @@ S.Container = styled.div`
   width: 100%;
   max-width: 1024px;
   margin: 0 auto;
-  height: calc(100vh - 65px);
+  height: calc(100vh - 65px - var(--demo-banner-h));
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -13,7 +13,7 @@ const S = {};
 
 S.Background = styled.div`
   width: 100%;
-  min-height: calc(100vh - 65px);
+  min-height: calc(100vh - 65px - var(--demo-banner-h));
   background-color: #f9fafb;
   box-sizing: border-box;
 `;
@@ -22,7 +22,7 @@ S.Container = styled.div`
   width: 100%;
   max-width: 1024px;
   margin: 0 auto;
-  min-height: calc(100vh - 65px);
+  min-height: calc(100vh - 65px - var(--demo-banner-h));
   padding: 1.5rem 1.25rem 2rem;
   box-sizing: border-box;
   display: flex;

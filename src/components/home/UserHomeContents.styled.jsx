@@ -11,7 +11,7 @@ S.Container = styled.main`
   justify-content: center;
   max-width: 1024px;
   margin: 0 auto;
-  min-height: calc(100vh - 65px);
+  min-height: calc(100vh - 65px - var(--demo-banner-h));
   height: auto;
   padding: 2.5rem 1.25rem 3rem;
   text-align: center;

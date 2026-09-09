@@ -7,7 +7,7 @@ S.Container = styled.div`
   max-width: 1024px;
   margin: 0 auto;
   padding: clamp(3rem, 8vw, 6rem) 1.25rem;
-  min-height: calc(100vh - 65px);
+  min-height: calc(100vh - 65px - var(--demo-banner-h));
   height: auto;
   box-sizing: border-box;
 
@@ -15,7 +15,7 @@ S.Container = styled.div`
     padding-bottom: calc(clamp(3rem, 8vw, 6rem) + 5rem);
 
     [id^='step'] {
-      scroll-margin-top: calc(65px + 1.25rem);
+      scroll-margin-top: calc(65px + var(--demo-banner-h) + 1.25rem);
     }
   }
 
@@ -744,7 +744,7 @@ S.Container = styled.div`
 S.FloatingNav = styled.aside`
   z-index: 10;
   position: fixed;
-  top: 15%;
+  top: calc(65px + var(--demo-banner-h) + 1.5rem);
   right: 5%;
   width: min(36vw, 280px);
   padding: 1rem 0.85rem;
@@ -894,12 +894,12 @@ S.SubmitGuideLayout = styled.div`
 
 S.SubmitGuideSidebar = styled.aside`
   position: fixed;
-  top: calc(65px + 1.1rem);
+  top: calc(65px + var(--demo-banner-h) + 1.1rem);
   left: 0.65rem;
   z-index: 20;
   flex-shrink: 0;
   width: 268px;
-  max-height: calc(100vh - 65px - 2.2rem);
+  max-height: calc(100vh - 65px - var(--demo-banner-h) - 2.2rem);
   display: flex;
   flex-direction: column;
   background: #fff;

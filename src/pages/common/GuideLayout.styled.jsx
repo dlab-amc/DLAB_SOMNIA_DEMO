@@ -6,7 +6,7 @@ S.Container = styled.div`
 
   .guide-container {
     padding: 2rem 3rem;
-    height: calc(100vh - 65px);
+    height: calc(100vh - 65px - var(--demo-banner-h));
     width: 100%;
     overflow-y: scroll;
 

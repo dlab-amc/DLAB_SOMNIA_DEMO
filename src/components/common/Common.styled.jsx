@@ -5,12 +5,12 @@ S.Container = styled.div``;
 
 S.MainContents = styled.div`
   width: 100%;
-  height: calc(100vh - 65px);
+  height: calc(100vh - 65px - var(--demo-banner-h));
 
   &.screenshot-page {
     padding: 0 0 1.5rem;
     height: auto;
-    min-height: 100vh;
+    min-height: calc(100vh - var(--demo-banner-h));
   }
   overflow-y: auto;
   scrollbar-width: thin;
