@@ -75,7 +75,6 @@ const GuideMockSampleCriteria = () => {
     <S.Frame>
       <S.SampleCard>
         <div className="section-heading">
-          <span className="section-num">2</span>
           <h4 className="section-title">
             {tf("샘플 수 계산 기준", "Sample Size Criteria")}
           </h4>
