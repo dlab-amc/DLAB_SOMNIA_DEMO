@@ -1,0 +1,128 @@
+Output Parameter Name,Definition,Event Type
+trt,"Total recording time, TRT",Sleep
+tst,"Total sleep time, TST",Sleep
+lights_out,Lights out clock time,Sleep
+lights_on,Lights on clock time,Sleep
+sleep_period,Sleep period (=TRT- Sleep onset),Sleep
+waso,"Wake After Sleep Onset, WASO",Sleep
+sleep_onset,Sleep onset,Sleep
+sleep_efficiency,Sleep efficiency [%] (=(TST/TRT)¡¿100),Sleep
+s1,Total N1 stage time,Sleep
+s2,Total N2 stage time,Sleep
+s3,Total N3 stage time,Sleep
+r,Total REM stage time,Sleep
+w,Total Wake stage time,Sleep
+sleep_latency,Interval between lights-out/in-bed time and sleep onset,Sleep
+sleep_latency_to_n1,Sleep latency to N1,Sleep
+sleep_latency_to_n2,Sleep latency to N2,Sleep
+sleep_latency_to_n3,"Sleep latency to N3 (=SWS, slow wave sleep)",Sleep
+sleep_r_latency_from_sleep_onset,Sleep R latency from Sleep onset,Sleep
+s1_tst,Ratio of total N1 stage time to TST,Sleep
+s2_tst,Ratio of total N2 stage time to TST,Sleep
+s3_tst,Ratio of total N3 stage time to TST,Sleep
+sr_tst,Ratio of total REM stage time to TST,Sleep
+s1_sleep_period,Ratio of total N1 stage time to Sleep period,Sleep
+s2_sleep_period,Ratio of total N2 stage time to Sleep period,Sleep
+s3_sleep_period,Ratio of total N3 stage time to Sleep period,Sleep
+sr_sleep_period,Ratio of total REM stage time to Sleep period,Sleep
+w_sleep_period,Ratio of total WAKE stage time to Sleep period,Sleep
+sleep_stage_5,"Categorical sleep stage classification into five stages based on 30-second epochs
+* 0: Wake, 1: N1 (Stage 1), 2: N2 (Stage 2), 3: N3 (Stage 3 & 4 combined), 4: REM",Sleep
+sleep_stage_3,"Categorical sleep stage classification into three stages based on 30-second epochs
+* 0: Wake, 1: NREM (Stages 1?4 combined: N1, N2, N3), 2: REM",Sleep
+apnea_arousals_num,Number of apnea arousals,Arousal
+apnea_arousals_idx,Number of apnea arousals per hour of sleep,Arousal
+lm_arousals_num,Number of leg movement arousals,Arousal
+lm_arousals_idx,Number of leg movement arousals per hour of sleep,Arousal
+desaturation_num,Number of desaturation arousals,Arousal
+desaturation_idx,Number of desaturation arousals per hour of sleep,Arousal
+respiratory_arousals_num,Number of respiratory arousals,Arousal
+respiratory_arousals_idx,Number of respiratory arousals per hour of sleep,Arousal
+user_defined_arousals_num,Number of unspecified arousals,Arousal
+user_defined_arousals_idx,Number of unspecified arousals per hour of sleep,Arousal
+spontaneous_arousals_num,Number of spontaneous arousals,Arousal
+spontaneous_arousals_idx,Number of spontaneous arousals per hour of sleep,Arousal
+hypopnea_arousals_num,Number of hypopnea arousals,Arousal
+hypopnea_arousals_idx,Number of hypopnea arousals per hour of sleep,Arousal
+plm_arousals_num,Number of plm arousals (PLM; Periodic Leg Movements),Arousal
+plm_arousals_idx,Number of plm arousals per hour of sleep,Arousal
+snore_arousals_num,Number of snore arousals,Arousal
+snore_arousals_idx,Number of snore arousals per hour of sleep,Arousal
+total_arousals_num,Number of total arousals,Arousal
+total_arousals_idx,Number of total arousals per hour of sleep,Arousal
+ahi,"Apnea-Hypopnea Index, AHI: Number of total apneas and hypopneas per hour of sleep",Respiratory
+total_apnea_num,Number of total apneas,Respiratory
+total_apnea_idx,"Apnea Index, AI: Number of total apneas per hour of sleep",Respiratory
+oa_num,Number of obstructive apneas,Respiratory
+oa_idx,"Obstructive Apnea Index, OAI: Number of obstructive apneas per hour of sleep",Respiratory
+ca_num,Number of central apneas,Respiratory
+ca_idx,"Central Apnea Index, CAI: Number of central apneas per hour of sleep",Respiratory
+ma_num,Number of mixed apneas,Respiratory
+ma_idx,"Mixed Apnea Index, MAI: Number of mixed apneas per hour of sleep",Respiratory
+oh_num,Number of obstructive hypopneas,Respiratory
+oh_idx,"Obstructive Hypopnea Index, OHI: Number of obstructive hypopneas per hour of sleep",Respiratory
+ch_num,Number of central hypopneas,Respiratory
+ch_idx,"Central Hypopnea Index, CHI: Number of central hypopneas per hour of sleep",Respiratory
+total_hypopnea_num,Number of total hypopneas,Respiratory
+total_hypopnea_idx,"Hypopnea Index, HI: Number of total hypopneas per hour of sleep",Respiratory
+oahi_num,Number of obstructive apnea hypopnea,Respiratory
+oahi_idx,"Obstructive apnea hypopnea index, OAHI: Number of obstructive apnea hypopnea per hour of sleep",Respiratory
+cahi_num,Number of central apnea hypopneas,Respiratory
+cahi_idx,"Central apnea hypopnea index, CAHI: Number of central apnea hypopneas per hour of sleep",Respiratory
+rdi_idx,"Respiratory disturbance index, RDI: Number of apneas, hypopneas, and respiratory effort-related arousals (RERAs) per hour of sleep",Respiratory
+rera_num,"Number of RERAs
+* RERAs: Respiratory effort-related arousal",Respiratory
+rera_idx,Number of RERAs per hour of sleep,Respiratory
+odi_idx,"Oxygen Desaturation Index, ODI: Number of desaturation events (¡Ã3% or ¡Ã4%) per hour of sleep",Respiratory
+snore_time,Total snore time ,Respiratory
+snore_pct,Percentage of total snore time ,Respiratory
+hypoventilation_num,Number of hypoventilations,Respiratory
+hypoventilation_idx,Number of hypoventilations per hour of sleep,Respiratory
+cheyne_stokes_num,Number of cheyne-stokes,Respiratory
+cheyne_stokes_tst,Number of cheyne-stokes per hour of sleep,Respiratory
+rmi_num,"Number of RMI
+* RMI: respiratory movement index",Respiratory
+rmi_idx,RMI,Respiratory
+periodic_breathing_num,Number of periodic breatings,Respiratory
+periodic_breathing_idx,Number of periodic breatings per hour of sleep,Respiratory
+total_lm_num,Number of total movements without arousal,Movement
+total_lm_idx,Number of total movements per hour of sleep,Movement
+total_plm_num,"Number of total periodic limb movements of sleep
+* PLM: periodic limb movement = period limb leg movement + respiratory-related leg movements",Movement
+total_plm_idx,Number of plms per hour of sleep,Movement
+supine_num,Number of supine movements,Movement
+supine_idx,Number of supine movements per hour of sleep,Movement
+prone_num,Number of prone movements,Movement
+prone_idx,Number of prone movements per hour of sleep,Movement
+right_num,Number of right movements,Movement
+right_idx,Number of right movements per hour of sleep,Movement
+upright_num,Number of upright movements,Movement
+upright_idx,Number of upright movements per hour of sleep,Movement
+left_num,Number of unspecified movements,Movement
+left_idx,Number of unspecified movements per hour of sleep ,Movement
+unknown_num,Number of left movements,Movement
+unknown_idx,Number of left movements per hour of sleep,Movement
+plm_lm_num,Number of periodic limb leg movements,Movement
+plm_lm_idx,Number of periodic limb leg movements per hour of sleep,Movement
+plm_rrlm_num,Number of respiratory event-related limb movements,Movement
+plm_rrlm_idx,Number of respiratory event-related limb movements per hour of sleep,Movement
+alma_num,Number of alternating leg muscle activations,Movement
+alma_idx,Number of alternating leg muscle activations per hour of sleep,Movement
+hft_num,Number of hypnagogic foot tremors,Movement
+hft_idx,Number of hypnagogic foot tremors per hour of sleep,Movement
+active_move_num,Number of active movements,Movement
+active_move_idx,Number of active movements per hour of sleep,Movement
+average_heart_rate_during_sleep,average heart rate during total sleep time,Cardiac
+average_heart_rate_during_recording,average heart rate during total recording time,Cardiac
+highest_heart_rate_during_sleep,max heart rate during total sleep time,Cardiac
+highest_heart_rate_during_recording,max heart rate during total recording time,Cardiac
+lowest_heart_rate_during_sleep,min heart rate during total sleep time,Cardiac
+lowest_heart_rate_during_recording,min heart rate during total recording time,Cardiac
+heartrate_increase_num,Number of rising heart rate,Cardiac
+asystole_num,Number of asystole,Cardiac
+sinus_tachycardia_num,Number of sinus tachycardia,Cardiac
+narrow_complex_tachycardia_num,Number of narrow complex tachycardia,Cardiac
+wide_complex_tachycardia_num,Number of wide complex tachycardia,Cardiac
+bradycardia_num,Number of bradycardia,Cardiac
+atrial_fibrillation_num,Number of atrial fibrillation,Cardiac
+other_arrhythmia_num,Number of other arrhythmia,Cardiac
