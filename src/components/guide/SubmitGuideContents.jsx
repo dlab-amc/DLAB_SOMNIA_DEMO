@@ -468,7 +468,7 @@ const SubmitGuideContents = () => {
           </div>
           <div className='file-info-wrap' id='step1-3-protocol'>
             <strong className='file-info-title'>
-              <span className='file-name one'>
+              <span className='file-name'>
                 {tf('1. 테스트 데이터 샘플링 및 서브그룹 분석 프로토콜', '1. Test Data Sampling and Subgroup Analysis Protocol')}
               </span>
             </strong>
@@ -483,7 +483,7 @@ const SubmitGuideContents = () => {
 
           <div className='file-info-wrap'>
             <strong className='file-info-title'>
-              <span className='file-name two'>
+              <span className='file-name'>
                 {tf('1-1. 성인군', '1-1. Adult group')}
               </span>
             </strong>
@@ -498,7 +498,7 @@ const SubmitGuideContents = () => {
 
           <div className='file-info-wrap'>
             <strong className='file-info-title'>
-              <span className='file-name three'>
+              <span className='file-name'>
                 {tf('1-2. 소아·청소년군', '1-2. Pediatric and adolescent group')}
               </span>
             </strong>
@@ -513,7 +513,7 @@ const SubmitGuideContents = () => {
 
           <div className='file-info-wrap' id='step1-3-sample-size'>
             <strong className='file-info-title'>
-              <span className='file-name four'>{tf('2. 테스트 데이터 샘플 수 산정 방법', '2. Test Data Sample Size Calculation Method')}</span>
+              <span className='file-name'>{tf('2. 테스트 데이터 샘플 수 산정 방법', '2. Test Data Sample Size Calculation Method')}</span>
             </strong>
             <div className='file-info-contents'>
               <div className='line-wrap no-margin'>
