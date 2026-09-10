@@ -591,6 +591,7 @@ const SubmitGuideContents = () => {
           <div className='margin'></div>
           <div className='part-image-wrap guide-ui-mock-wrap'>
             <GuideMockSampleCriteria />
+            <p className='image-desc'>[{tf('샘플 수 계산 기준', 'Sample size criteria')}]</p>
           </div>
         </div>
       </section>
@@ -608,6 +609,7 @@ const SubmitGuideContents = () => {
         </div>
         <div className='part-image-wrap guide-ui-mock-wrap'>
           <GuideMockProgressExplain />
+          <p className='image-desc'>[{tf('진행 상태 로그', 'Progress log')}]</p>
         </div>
       </section>
       <div className='section-break-line'></div>

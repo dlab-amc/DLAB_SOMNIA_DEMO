@@ -246,6 +246,13 @@ S.Container = styled.div`
     padding: 1rem 0 0;
     box-sizing: border-box;
     overflow: visible;
+
+    .image-desc {
+      font-size: 17px;
+      font-weight: 600;
+      text-align: center;
+      margin-top: 1rem;
+    }
   }
 
   .step-one-section {
